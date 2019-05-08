@@ -31,31 +31,48 @@ Arduino Sketch to read and write rfid tags with Gwiot 7941E and Gwiot 7941W
 8. Card number is 6B 3D 12 D6
 9. Output data is 3D 12 D6
 10. Weigand 26 Code
+
 0
+
 111101
+
 10010
+
 11010110
+
 1
  
 Even Check
 3D
+
 12
+
 D6
+
 Odd Check
 
 11. Weigand 34 Code
 Weigand 34 Code
 0
+
 1101011
+
 111101
+
 10010
+
 11010110
+
 0
 Even Check
 6B
+
 3D
+
 12
+
 D6
+
 Odd Check
 
 12. UART Interface Output
@@ -173,12 +190,19 @@ CD DC
 
 ## 5.Example:
 AB BA 00 10 00 10
+
 AB BA 00 11 04 6D E9 5C 17 DA
+
 AB BA 00 12 09 00 01 0A FF FF FF FF FF FF 10
+
 AB BA 00 13 19 00 01 0A FF FF FF FF FF FF 00 01 02 03 04 05 06 07 08 09 01 02 03 04 05 06 07
+
 AB BA 00 14 0E 00 0A FF FF FF FF FF FF 01 02 03 04 05 06 17
+
 AB BA 00 15 00 15
+
 AB BA 00 16 05 2E 00 B6 A3 02 2A
+
 AB BA 17 07 0A FF FF FF FF FF FF 1A
 
 ## 6.Applications:
