@@ -133,7 +133,6 @@ Keep away from interference source, and strong interference signal may affect ca
 
 Sending Protocol:
 Protocol Header | Address | Command | Data Length |    Data     | XOR Check
-
          2 Byte | 1 Byte  | 1 Byte  | 1 byte      | 1-255 Byte  | 1 Byte
 AB BA
            
@@ -163,10 +162,8 @@ CD DC
 6. Data: read and written data
 
   Sending Data:
-    1).Read Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes
-
-    2).Write Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes and block data of 16 bytes
-
+    1).Read Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes.
+    2).Write Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes and block data of 16 bytes.
     3).Modify Password: the first byte means the certain sector; the second byte means A or B group password (0x0A/0x0B); then it comes with old password of 6 byte and new password
 
   Receiving Data:
