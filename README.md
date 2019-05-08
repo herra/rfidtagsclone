@@ -94,24 +94,41 @@ XOR Check Except Data Head And Data End
 
 13. Card Type:
 0x02 EM4100
+
 0x01 MIFARE 1K
+
 0x03 MIFARE 4K
+
 0x10 HID Card
+
 0x11 T5567
+
 0x20 2nd Card
+
 0x21 ISO14443B
+
 0x22 FELICA
+
 0x30 15693 Label
+
 0x50 CPU Card
+
 0x51 Sector Information
+
 0xFF Keyboard Data
+
 For example: the data received by serial port tool is 02 0A 02 2E 00 B6 D7 B5 F2 03, then
 
 The first byte 0x02 means data start
+
 The second byte 0x0A means the whole data length is 10 bytes, which includes data start and data end
+
 The third byte 0x02 means the card type is EM4100
+
 The fourth to eighth byte (0x2E 0x00 0xB6 0xD7 0xB5) means the read card number, and the fourth byte 0x2E is hidden card number
+
 The ninth byte 0xF2 means BCC check of second byte to eighth byte
+
 The tenth byte 0x03 means data end
 
 ## 5.Notice:
@@ -179,9 +196,9 @@ CD DC
 6. Data: read and written data
 
   Sending Data:
-    1).Read Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes.
-    2).Write Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes and block data of 16 bytes.
-    3).Modify Password: the first byte means the certain sector; the second byte means A or B group password (0x0A/0x0B); then it comes with old password of 6 byte and new password
+    1. Read Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes.
+    2. Write Specified Sector: the first byte of the data represents sector; the second byte means the certain block of the sector; the third byte means A or B group password (0x0A/0x0B); then it comes with password of 6 bytes and block data of 16 bytes.
+    3. Modify Password: the first byte means the certain sector; the second byte means A or B group password (0x0A/0x0B); then it comes with old password of 6 byte and new password
 
   Receiving Data:
     Read specified sector return data format, the first byte is sector; the second byte is the certain block of sector; then it comes with block data of 16 bytes
