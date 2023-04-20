@@ -1,6 +1,9 @@
 # RfidTagsClone
 Arduino Sketch to read and write rfid tags with Gwiot 7941E and Gwiot 7941W
 
+# Schematics
+![Connection diagram](/schematics.png?raw=true "Connection diagram")
+
 # Docs 7941E
 ## 1. Description:
 7941E card reader module, integrated high performance card reading radio frequency circuit and antenna and users can select wiegand or UART interface. Rich application support, it supports various cards card reading operation
